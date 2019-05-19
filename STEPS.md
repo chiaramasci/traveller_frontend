@@ -65,3 +65,9 @@ In the console:
 store.getState()
 store.subscribe(() => console.log('Look ma, Redux!!')) //we have added a callback that is triggered whenever an action is dispatched
 store.dispatch( addArticle({ title: 'React Redux Tutorial for Beginners', id: 1 }) )
+
+AJAX
+-> redux-thunk
+npm i redux-thunk --save-dev
+
+and import it in the store
