@@ -1,0 +1,2 @@
+export const UPDATE_PROFILE = "UPDATE_PROFILE";
+export const GET_USER_INFO = "GET_USER_INFO";

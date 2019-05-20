@@ -1,0 +1,3 @@
+export const GET_LIST_CHATS = "GET_LIST_CHATS";
+export const GET_CHAT_MESSAGES = "GET_CHAT_MESSAGES";
+export const ADD_MESSAGE = "ADD_MESSAGE";
