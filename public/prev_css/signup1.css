@@ -1,0 +1,144 @@
+* {
+  margin: 0 !important;
+  border: 0 !important;
+}
+
+/*NAVBAR */
+nav {
+  background: blue;
+}
+
+#navbarCollapse a {
+  text-decoration: none;
+  color: white;
+}
+#navbarCollapse a:hover {
+  background-color: #6dd5e1;
+}
+
+#users,
+#logout,
+#msg,
+#org {
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+  text-align: center;
+  color: blue;
+  margin: 5px;
+}
+
+/* Full-width input fields */
+
+input[type="text"],
+input[type="password"],
+input[type="date"] {
+  width: 80%;
+  padding: 10px 20px;
+  margin: 10px;
+  display: inline-block;
+  font-size: 20px;
+  border: none;
+  background: #f1f1f1;
+}
+
+label i {
+  float: left;
+  line-height: 50px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/*BUTTONS*/
+
+.emailbtn {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 20px;
+}
+
+.button a {
+  color: white;
+}
+
+.googlebtn:hover {
+  opacity: 1;
+}
+
+.emailbtn:hover {
+  opacity: 1;
+}
+
+.googlebtn {
+  background-color: white;
+  color: blue;
+  border: 2px solid blue;
+  padding: 20px;
+}
+
+.emailbtn,
+.googlebtn {
+  padding: 24px 5px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: center;
+  font-size: 16px;
+  width: 100px;
+  opacity: 0.9;
+}
+
+.checkbox {
+  width: 20vw;
+  float: left;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+#next {
+  float: initial;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+
+.container {
+  padding: 60px;
+}
+
+/* Clear floats */
+
+.button::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.foot {
+  padding: 10px;
+}
+
+/*RESPONSIVENESS*/
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .container {
+    padding: 60px;
+  }
+  #next {
+    width: 100%;
+  }
+}

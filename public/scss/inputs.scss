@@ -1,0 +1,205 @@
+/*SIGNUP1*/
+#signup,
+#login {
+  margin-top: 15vh;
+  color: blue;
+  text-align: center;
+  .emailbtn {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 20px;
+  }
+
+  .button a {
+    color: white;
+  }
+
+  .googlebtn:hover {
+    opacity: 1;
+  }
+
+  .emailbtn:hover {
+    opacity: 1;
+  }
+
+  .googlebtn {
+    background-color: white;
+    color: blue;
+    border: 2px solid blue;
+    padding: 20px;
+  }
+
+  .emailbtn,
+  .googlebtn {
+    padding: 24px 5px;
+    margin: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: center;
+    font-size: 16px;
+    width: 100px;
+    opacity: 0.9;
+  }
+
+  .checkbox {
+    width: 20vw;
+    float: left;
+  }
+
+  label {
+    width: 100%;
+
+    .fa {
+      font-size: 1.5em;
+    }
+
+    .label-two-inputs {
+      width: 25% !important;
+    }
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="date"] {
+    width: 60%;
+    padding: 14px 28px;
+    margin: 30px;
+    display: inline-block;
+    font-size: 1em;
+    border: none;
+    background: #f1f1f1;
+
+    @media screen and (max-width: 951px) {
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="date"]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  /* Float cancel and signup buttons and add an equal width */
+  #next {
+    float: initial;
+    width: 50%;
+    @media screen and (max-width: 300px) {
+      width: 100%;
+    }
+  }
+
+  /* Clear floats */
+
+  .button::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .foot {
+    padding: 10px;
+  }
+
+  #buttonsfascia {
+    button {
+      background: blue;
+      color: white;
+    }
+  }
+}
+
+/*CHATS*/
+#chats {
+  button {
+    background-color: blue;
+    color: white;
+    padding: 10px 10px;
+    margin: 40px;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: center;
+    font-size: 13px;
+    width: 100px;
+    opacity: 0.9;
+    float: right;
+  }
+
+  button:hover {
+    opacity: 1;
+  }
+
+  /* Clear floats */
+  .button::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+/*HOME*/
+
+#home {
+  .form-control:hover {
+    color: white;
+    background-color: #0066cc;
+  }
+  .form-control {
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    width: 140px;
+    border: 2px solid #0066cc;
+    border-radius: 15px;
+  }
+
+  #SocialBtn {
+    right: 250px;
+
+    @media screen and (max-width: 959px) {
+      right: 200px;
+    }
+  }
+
+  #OrganizeBtn {
+    left: 250px;
+
+    @media screen and (max-width: 959px) {
+      left: 200px;
+    }
+  }
+}
+
+/*LOGIN*/
+#login {
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px;
+    display: inline-block;
+    font-size: 20px;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+}

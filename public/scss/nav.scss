@@ -1,0 +1,18 @@
+nav {
+  background: blue;
+}
+
+#navbarCollapse a {
+  text-decoration: none;
+  color: white;
+}
+#navbarCollapse a:hover {
+  background-color: #6dd5e1;
+}
+
+#users,
+#logout,
+#msg,
+#org {
+  color: white;
+}

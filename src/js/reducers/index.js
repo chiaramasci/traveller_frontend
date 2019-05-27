@@ -27,15 +27,17 @@
 // }
 // export default rootReducer;
 
-import { combineReducers } from "redux";
+import { combineReducers, createStore } from "redux";
 import CLoginSignUp from "./cLoginSignUp";
 import CUser from "./cUser";
 import CSearchPeople from "./csearchPeople";
 import CMessagePeople from "./cMessagePeople";
 
-export default combineReducers({
+const rootReducer = combineReducers({
   CLoginSignUp,
   CUser,
   CSearchPeople,
   CMessagePeople
 });
+
+export default rootReducer;

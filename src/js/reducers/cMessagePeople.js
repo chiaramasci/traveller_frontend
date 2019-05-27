@@ -6,8 +6,7 @@ import {
 
 const CMessagePeople_state = {
   listConversations: [],
-  listMessages: [],
-  message: []
+  listMessages: []
 };
 
 export default function CSearchPeople(state = CMessagePeople_state, action) {

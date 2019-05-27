@@ -1,0 +1,47 @@
+/*HOME*/
+#home {
+  #cf img {
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+
+    animation-name: example;
+    animation-iteration-count: infinite;
+    animation-duration: 9s;
+    animation-direction: alternate;
+
+    @media screen and (max-width: 959px) {
+      width: 100%;
+      height: 70%;
+    }
+  }
+  @keyframes example {
+    0% {
+      opacity: 1;
+    }
+    17% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0;
+    }
+    76% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+  #cf img:nth-of-type(1) {
+    animation-delay: 6s;
+  }
+  #cf img:nth-of-type(2) {
+    animation-delay: 4s;
+  }
+  #cf img:nth-of-type(3) {
+    animation-delay: 2s;
+  }
+  #cf img:nth-of-type(4) {
+    animation-delay: 0s;
+  }
+}

@@ -1,0 +1,14 @@
+/*RESPONSIVENESS*/
+@media screen and (max-width: 959px) {
+  /* For mobile phones: */
+  #home {
+    width: 100%;
+  }
+
+  .form-control {
+    font-size: 10px;
+    top: 70%;
+    width: 35%;
+    height: 30px;
+  }
+}

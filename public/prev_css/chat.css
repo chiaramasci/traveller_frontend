@@ -1,0 +1,81 @@
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: blue;
+  color: white;
+  padding: 10px 10px;
+  margin: 40px;
+  border: none;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: center;
+  font-size: 13px;
+  width: 100px;
+  opacity: 0.9;
+  float: right;
+}
+
+button:hover {
+  opacity: 1;
+}
+/* Float cancel and signup buttons and add an equal width */
+#next {
+  float: initial;
+  width: 50%;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+.chat {
+  margin: 0px;
+  margin-left: 40px;
+  text-align: left;
+  float: left;
+  border: 1px solid;
+  border-radius: 3px;
+  width: 500px;
+  height: 50px;
+  padding: 10px;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+
+/* Add padding to container elements */
+.container {
+  padding: 60px;
+  height: 600px;
+}
+
+/* Clear floats */
+.button::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .container {
+    padding: 40px;
+  }
+  #next {
+    width: 100%;
+  }
+  .chat {
+    margin: 0px;
+    margin-left: 0px;
+    text-align: left;
+    float: left;
+    border: 1px solid;
+    border-radius: 3px;
+    width: 150px;
+    height: 60px;
+    padding: 0px;
+  }
+}

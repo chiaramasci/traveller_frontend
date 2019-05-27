@@ -8,4 +8,5 @@ const store = createStore(
   rootReducer,
   storeEnhancers(applyMiddleware(forbiddenWordsMiddleware, thunk))
 );
+console.log(store.getState());
 export default store;

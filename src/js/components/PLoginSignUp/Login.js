@@ -8,6 +8,11 @@ function mapDispatchToProps(dispatch) {
     login: loginInfo => dispatch(login(loginInfo))
   };
 }
+
+const mapStateToProps = state => {
+  return { user_id: state.user_id };
+};
+
 class ConnectedLogin extends Component {
   constructor() {
     super();
@@ -22,16 +27,13 @@ class ConnectedLogin extends Component {
   }
 
   handleChange(event) {
+    console.log(this.state.password);
     this.setState({ [event.target.id]: event.target.value });
   }
 
   handleSubmit(event) {
     event.preventDefault();
     console.log(this.state);
-    const { email } = this.state.email;
-    const { password } = this.state.password;
-    const { lat } = this.state.email;
-    const { lon } = this.state.password;
     this.props.login(this.state);
     // this.setState({ login: "", password: "" });
   }
@@ -40,27 +42,51 @@ class ConnectedLogin extends Component {
     const { password } = this.state.password;
 
     return (
-      <form onSubmit={this.handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="title">Title</label>
-          <input
-            type="text"
-            className="form-control"
-            id="email"
-            value={email}
-            onChange={this.handleChange}
-          />
-          <input
-            type="password"
-            className="form-control"
-            id="password"
-            value={password}
-            onChange={this.handleChange}
-          />
+      <form onSubmit={this.handleSubmit} id="login">
+        {/* TODO: user_id seems not to be updated after login */}
+        {this.props.user_id}
+        <label htmlFor="title" className="text-center text-uppercase">
+          <h1>INSERT LOGIN INFO</h1>
+        </label>
+        <div className="form-group container">
+          <label data-icon="u">
+            <i class="fa fa-envelope" />
+            <input
+              type="text"
+              className="form-control"
+              id="email"
+              value={this.props.email}
+              onChange={this.props.handleChange}
+              placeholder="email"
+              required
+            />
+          </label>
+
+          <label data-icon="u">
+            <i class="fa fa-lock" />
+            <input
+              type="password"
+              placeholder="password"
+              className="form-control"
+              id="password"
+              value={this.props.password}
+              onChange={this.props.handleChange}
+              required
+            />
+          </label>
         </div>
-        <button type="submit" className="btn btn-success btn-lg">
-          SAVE
+        <button type="submit" className="emailbtn" id="next">
+          CONTINUE WITH EMAIL
         </button>
+        <button type="button" class="googlebtn" id="next">
+          <i class="fab fa-google" />
+          CONTINUE WITH GOOGLE+
+        </button>
+        <div class="foot">
+          <a href="#">
+            <p>Already have an account?</p>
+          </a>
+        </div>
       </form>
     );
   }
@@ -68,7 +94,7 @@ class ConnectedLogin extends Component {
 
 //null as no mapStateToProps is present
 const Login = connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(ConnectedLogin);
 export default Login;

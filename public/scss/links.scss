@@ -1,0 +1,82 @@
+/*ORG FLIGHTS*/
+#orgflights {
+  #kayak,
+  #skyScan,
+  #expedia,
+  #momondo,
+  #eDreams {
+    color: black;
+    background-color: white;
+    margin: 50px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    font-size: 20px;
+  }
+}
+
+/*ORG PROPS*/
+#orgprops {
+  #traveldoc,
+  #international,
+  #europe,
+  #badass,
+  #things {
+    color: black;
+    background-color: white;
+    margin: 50px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    font-size: 20px;
+
+    @media screen and (max-width: 959px) {
+      font-size: 10px;
+      width: 80%;
+      margin: 30px;
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+
+/*ORG SLEEP*/
+#orgsleep {
+  #trivago,
+  #airbnb,
+  #booking,
+  #hotels,
+  #wimdu {
+    color: black;
+    background-color: white;
+    margin: 50px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    font-size: 20px;
+
+    @media screen and (max-width: 959px) {
+      font-size: 10px;
+      width: 80%;
+      margin: 30px;
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
+
+/*HOME*/
+#home {
+  a {
+    text-decoration: none;
+    color: #0000cc;
+  }
+  a:hover {
+    color: white;
+  }
+}
