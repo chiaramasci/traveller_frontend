@@ -6,6 +6,9 @@ import {
   LOGGED_OUT
 } from "../constants/cLoginSignUpUser";
 
+//"https://traveller-friendeller19872.appspot.com
+const API_URL = "http://127.0.0.1:5000";
+
 export function login(loginInfo) {
   return function(dispatch, getState) {
     const email = loginInfo.email;
@@ -22,7 +25,7 @@ export function login(loginInfo) {
 
     console.log(JSON.stringify(data));
 
-    return fetch("https://traveller-friendeller19872.appspot.com/login", {
+    return fetch(API_URL + "/login", {
       method: "POST",
       "Content-Type": "application/json",
       Accept: "text/plain",
@@ -66,16 +69,13 @@ export function createDBUser(userInfo) {
 
     console.log(JSON.stringify(data));
 
-    return fetch(
-      "https://traveller-friendeller19872.appspot.com/createprofile",
-      {
-        method: "POST",
-        "Content-Type": "application/json",
-        Accept: "text/plain",
-        crossDomain: true,
-        body: JSON.stringify(data)
-      }
-    )
+    return fetch(API_URL + "/createprofile", {
+      method: "POST",
+      "Content-Type": "application/json",
+      Accept: "text/plain",
+      crossDomain: true,
+      body: JSON.stringify(data)
+    })
       .then(response => response.text())
       .then(text => {
         console.log(text);
@@ -90,7 +90,7 @@ export function createDBUser(userInfo) {
 
 export function logout() {
   return function(dispatch, getState) {
-    return fetch("https://traveller-friendeller19872.appspot.com/logout", {
+    return fetch(API_URL + "/logout", {
       Accept: "text/plain",
       credentials: "include"
     })

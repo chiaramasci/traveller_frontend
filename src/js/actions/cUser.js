@@ -1,4 +1,6 @@
 //TODO: TEST
+//"https://traveller-friendeller19872.appspot.com
+const API_URL = "http://127.0.0.1:5000";
 
 export function updateProfile(userInfo) {
   return function(dispatch, getState) {
@@ -26,7 +28,7 @@ export function updateProfile(userInfo) {
 
     console.log(JSON.stringify(data));
 
-    return fetch("http://127.0.0.1:5000/updateprofile", {
+    return fetch(API_URL + "/updateprofile", {
       method: "POST",
       "Content-Type": "application/json",
       Accept: "text/plain",
@@ -54,7 +56,7 @@ export function getUserInfo(userId) {
 
     console.log(JSON.stringify(data));
 
-    return fetch("http://127.0.0.1:5000/getuserinfo/" + user_id, {
+    return fetch(API_URL + "/getuserinfo/" + user_id, {
       "Content-Type": "application/json",
       Accept: "text/plain"
     })

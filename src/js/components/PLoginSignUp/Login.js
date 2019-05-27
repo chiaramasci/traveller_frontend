@@ -27,6 +27,7 @@ class ConnectedLogin extends Component {
   }
 
   handleChange(event) {
+    console.log("handleChange");
     console.log(this.state.password);
     this.setState({ [event.target.id]: event.target.value });
   }
@@ -40,6 +41,8 @@ class ConnectedLogin extends Component {
   render() {
     const { email } = this.state.email;
     const { password } = this.state.password;
+
+    console.log("C(A");
 
     return (
       <form onSubmit={this.handleSubmit} id="login">
@@ -55,8 +58,8 @@ class ConnectedLogin extends Component {
               type="text"
               className="form-control"
               id="email"
-              value={this.props.email}
-              onChange={this.props.handleChange}
+              value={this.state.email}
+              onChange={this.handleChange}
               placeholder="email"
               required
             />
@@ -69,8 +72,8 @@ class ConnectedLogin extends Component {
               placeholder="password"
               className="form-control"
               id="password"
-              value={this.props.password}
-              onChange={this.props.handleChange}
+              value={this.state.password}
+              onChange={this.handleChange}
               required
             />
           </label>

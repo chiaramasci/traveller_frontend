@@ -1,6 +1,9 @@
+//"https://traveller-friendeller19872.appspot.com
+const API_URL = "http://127.0.0.1:5000";
+
 export function getListChats() {
   return function(dispatch) {
-    return fetch("http://127.0.0.1:5000/getlistchats/", {
+    return fetch(API_URL + "/getlistchats/", {
       "Content-Type": "application/json",
       Accept: "application/json"
     })
@@ -18,7 +21,7 @@ export function getListChats() {
 
 export function getChatMessages() {
   return function(dispatch, getState) {
-    return fetch("http://127.0.0.1:5000/getchatmessages/", {
+    return fetch(API_URL + "/getchatmessages/", {
       "Content-Type": "application/json",
       Accept: "application/json"
     })
@@ -48,7 +51,7 @@ export function addMessage(message) {
 
     console.log(JSON.stringify(data));
 
-    return fetch("http://127.0.0.1:5000/addmessage", {
+    return fetch(API_URL + "/addmessage", {
       method: "POST",
       "Content-Type": "application/json",
       Accept: "text/plain",
