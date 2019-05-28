@@ -1,20 +1,27 @@
 //"https://traveller-friendeller19872.appspot.com
 const API_URL = "http://127.0.0.1:5000";
 
-export function getListChats() {
+//TODO: without using user_id. In order to do this, the session persistance has to be solved
+export function getListChats(user_id) {
   return function(dispatch) {
+    const data = {
+      user_id: user_id
+    };
+
     return fetch(API_URL + "/getlistchats/", {
+      method: "POST",
       "Content-Type": "application/json",
-      Accept: "application/json"
+      Accept: "application/json",
+      body: JSON.stringify(data)
     })
       .then(response => response.text())
       .then(text => {
         console.log(text);
-        if (text == "NOT_LOGGED") {
-          dispatch({ type: "NOT_LOGGED", payload: text });
-        } else {
-          dispatch({ type: "CHATS_LOADED", payload: text });
-        }
+        // if (text == "NOT_LOGGED") {
+        //   dispatch({ type: "NOT_LOGGED", payload: text });
+        // } else {
+        //   dispatch({ type: "CHATS_LOADED", payload: text });
+        // }
       });
   };
 }

@@ -1,3 +1,7 @@
+/**
+ * Reducer for the controller LoginSignUp
+ */
+
 import {
   CREATE_DB_USER,
   LOGIN,

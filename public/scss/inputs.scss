@@ -203,3 +203,40 @@
     margin-bottom: 25px;
   }
 }
+
+/*SEARCHPEOPLE*/
+#searchpeople {
+  #myInput {
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 80%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+  }
+}
+
+/*LIST CHATS*/
+#listchats {
+  button {
+    background-color: blue;
+    color: white;
+    padding: 10px 10px;
+    margin: 40px;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: center;
+    font-size: 13px;
+    width: 100px;
+    opacity: 0.9;
+    float: right;
+  }
+
+  button:hover {
+    opacity: 1;
+  }
+}

@@ -80,3 +80,16 @@
     color: white;
   }
 }
+
+/*SEARCH PEOPLE*/
+#searchpeople {
+  @media screen and (max-width: 300px) {
+    #myUL div a {
+      width: 90px;
+      height: 90px;
+      padding: 12px;
+      font-size: 8px;
+      color: black;
+    }
+  }
+}

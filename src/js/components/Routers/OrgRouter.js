@@ -8,6 +8,7 @@ import OrgProps from "../POrganization/OrgProps";
 import OrgSleep from "../POrganization/OrgSleep";
 import Login from "../PLoginSignUp/Login";
 
+//TODO check which id Friendler to give depending on props.user_id
 class AppRouter extends React.Component {
   render() {
     if (this.props.location == "OrgRouter") {
@@ -18,10 +19,10 @@ class AppRouter extends React.Component {
               <Link
                 class="navbar-brand"
                 to="/"
-                id="UnloggedRouter"
+                id={this.props.logged == 1 ? "LoggedRouter" : "UnloggedRouter"}
                 onClick={this.props.handleLocation}
               >
-                Friendeller
+                Friendler
               </Link>
               <button
                 type="button"

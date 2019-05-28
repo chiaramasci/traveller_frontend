@@ -4,47 +4,43 @@ import { getListChats } from "../../actions/cMessagePeople";
 
 import ChatItem from "./com-ChatItem";
 
-export class ListChatsConnected extends Component {
-  constructor() {
-    super();
+function mapDispatchToProps(dispatch) {
+  return {
+    getListChats: user_id => dispatch(getListChats(user_id))
+  };
+}
 
-    this.state = {
-      chats: [
-        {
-          name: "Chiara"
-        }
-      ]
-    };
+const mapStateToProps = state => {
+  return {
+    user_id: state.CUser.user_id,
+    chats: state.CMessagePeople.listConversations
+  };
+};
+
+export class ListChatsConnected extends Component {
+  constructor(props) {
+    super(props);
+    props.getListChats(props.user_id);
+    console.log(props.chats);
   }
-  componentDidMount() {
-    this.props.getListChats();
-  }
+
   render() {
     return (
-      <div class="container">
-        <link rel="stylesheet" href="/css/chat.css" />
-        <div>
-          <ul>
-            {this.state.chats.map(el => (
+      <div id="listchats">
+        <div class="container">
+          <div>
+            {this.props.chats.map(el => (
               <ChatItem key={el.id} title={el.name} />
             ))}
-          </ul>
+          </div>
+          <button>add chat</button>
         </div>
-        <button>add chat</button>
       </div>
     );
   }
 }
 
-//TODO instead of this.state.chats -> this.props.chats
-//TODO check combineReducers state
-
-function mapStateToProps(state) {
-  return {
-    chats: state.listConversations
-  };
-}
 export default connect(
   mapStateToProps,
-  { getListChats }
+  mapDispatchToProps
 )(ListChatsConnected);

@@ -1,0 +1,53 @@
+#myInput {
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 80%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL div a {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ddd;
+  color: white;
+  background-color: #6495ed;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+}
+
+#myUL div a:hover:not(.header) {
+  background-color: #eee;
+}
+.elements {
+  float: left;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
+}
+
+@media screen and (max-width: 300px) {
+  .container {
+    padding: 20px;
+  }
+  #next {
+    width: 100%;
+  }
+  #myUL div a {
+    width: 90px;
+    height: 90px;
+    padding: 12px;
+    font-size: 8px;
+    color: black;
+  }
+}

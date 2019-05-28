@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { login } from "../../actions/cLoginSignUp";
+import { Redirect } from "react-router-dom";
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -34,15 +35,19 @@ class ConnectedLogin extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(this.state);
     this.props.login(this.state);
   }
+
+  renderRedirect = () => {
+    if (this.props.user_id != "") {
+      return <Redirect to="/social/find/" />;
+    }
+  };
 
   render() {
     return (
       <form onSubmit={this.handleSubmit} id="login">
-        {/* TODO: user_id seems is updated, but it is not displayed */}
-        {this.props.user_id}
+        {this.renderRedirect}
         <label htmlFor="title" className="text-center text-uppercase">
           <h1>INSERT LOGIN INFO</h1>
         </label>

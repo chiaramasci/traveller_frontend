@@ -1,3 +1,7 @@
+/**
+ * Reducer for the controller MessagePeople
+ */
+
 import {
   GET_LIST_CHATS,
   GET_CHAT_MESSAGES,
@@ -5,7 +9,7 @@ import {
 } from "../constants/cMessagePeople";
 
 const CMessagePeople_state = {
-  listConversations: [],
+  listConversations: [{ conv_id: 1, name: "Michela" }],
   listMessages: []
 };
 

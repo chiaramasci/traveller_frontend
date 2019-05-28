@@ -207,6 +207,38 @@
   margin-bottom: 25px;
 }
 
+/*SEARCHPEOPLE*/
+#searchpeople #myInput {
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 80%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+/*LIST CHATS*/
+#listchats button {
+  background-color: blue;
+  color: white;
+  padding: 10px 10px;
+  margin: 40px;
+  border: none;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: center;
+  font-size: 13px;
+  width: 100px;
+  opacity: 0.9;
+  float: right;
+}
+#listchats button:hover {
+  opacity: 1;
+}
+
 /*ORG FLIGHTS*/
 #orgflights #kayak,
 #orgflights #skyScan,
@@ -290,6 +322,17 @@
 }
 #home a:hover {
   color: white;
+}
+
+/*SEARCH PEOPLE*/
+@media screen and (max-width: 300px) {
+  #searchpeople #myUL div a {
+    width: 90px;
+    height: 90px;
+    padding: 12px;
+    font-size: 8px;
+    color: black;
+  }
 }
 
 nav {
@@ -427,6 +470,12 @@ nav {
   #signup h1 {
     font-size: 1em;
   }
+}
+
+/*LIST CHATS*/
+#listchats h2 {
+  text-align: left;
+  margin-bottom: 20px;
 }
 
 /*HOME*/
@@ -575,6 +624,57 @@ nav {
   padding: 20px;
   box-sizing: border-box;
   background: #eee;
+}
+
+/*SEARCH PEOPLE*/
+#searchpeople #myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#searchpeople #myUL div a {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ddd;
+  color: white;
+  background-color: #6495ed;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+}
+#searchpeople #myUL div a:hover:not(.header) {
+  background-color: #eee;
+}
+#searchpeople .elements {
+  float: left;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
+}
+
+/*LIST CHATS*/
+#listchats {
+  box-sizing: border-box;
+  color: blue;
+  margin: 5px;
+}
+#listchats .chat {
+  margin: 0px;
+  margin-left: 40px;
+  text-align: left;
+  float: left;
+  border: 1px solid;
+  border-radius: 3px;
+  width: 500px;
+  height: 50px;
+  padding: 10px;
+}
+@media screen and (max-width: 300px) {
+  #listchats .container {
+    padding: 40px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

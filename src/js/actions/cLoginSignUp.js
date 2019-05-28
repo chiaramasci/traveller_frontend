@@ -1,3 +1,7 @@
+/**
+ * Action functions for the controller LoginSignUp
+ */
+
 import {
   CREATE_DB_USER,
   LOGIN,

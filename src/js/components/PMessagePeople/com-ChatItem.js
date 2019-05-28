@@ -6,9 +6,9 @@ export class ChatItem extends Component {
   }
   render() {
     return (
-      <li class="chat">
+      <div class="chat">
         <i class="fa fa-address-book"> {this.props.title}</i>
-      </li>
+      </div>
     );
   }
 }

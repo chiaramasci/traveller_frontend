@@ -14,7 +14,8 @@ class ConnectedApp extends React.Component {
   constructor() {
     super();
     this.state = {
-      location: "UnloggedRouter"
+      location: "UnloggedRouter",
+      logged: 0
     };
     this.handleLocation = this.handleLocation.bind(this);
   }
@@ -26,16 +27,15 @@ class ConnectedApp extends React.Component {
 
   componentWillReceiveProps(newProps) {
     if (newProps.user_id !== "") {
-      this.setState({ location: "LoggedRouter" });
+      this.setState({ location: "LoggedRouter", logged: 1 });
     } else {
-      this.setState({ location: "UnloggedRouter" });
+      this.setState({ location: "UnloggedRouter", logged: 0 });
     }
   }
 
   render() {
     return (
       <div>
-        <p>dai dai dai {this.props.user_id}</p>
         <LoggedRouter
           id="LoggedRouter"
           handleLocation={this.handleLocation}
@@ -50,6 +50,7 @@ class ConnectedApp extends React.Component {
           id="OrgRouter"
           handleLocation={this.handleLocation}
           location={this.state.location}
+          logged={this.state.logged}
         />
       </div>
     );
