@@ -27,7 +27,7 @@
 // }
 // export default rootReducer;
 
-import { combineReducers, createStore } from "redux";
+import { combineReducers } from "redux";
 import CLoginSignUp from "./cLoginSignUp";
 import CUser from "./cUser";
 import CSearchPeople from "./csearchPeople";

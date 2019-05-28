@@ -9,4 +9,6 @@ const store = createStore(
   storeEnhancers(applyMiddleware(forbiddenWordsMiddleware, thunk))
 );
 console.log(store.getState());
+window.store = store;
+
 export default store;

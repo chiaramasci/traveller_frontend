@@ -10,7 +10,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 const mapStateToProps = state => {
-  return { user_id: state.user_id };
+  return { user_id: state.CLoginSignUp.user_id };
 };
 
 class ConnectedLogin extends Component {
@@ -36,17 +36,12 @@ class ConnectedLogin extends Component {
     event.preventDefault();
     console.log(this.state);
     this.props.login(this.state);
-    // this.setState({ login: "", password: "" });
   }
+
   render() {
-    const { email } = this.state.email;
-    const { password } = this.state.password;
-
-    console.log("C(A");
-
     return (
       <form onSubmit={this.handleSubmit} id="login">
-        {/* TODO: user_id seems not to be updated after login */}
+        {/* TODO: user_id seems is updated, but it is not displayed */}
         {this.props.user_id}
         <label htmlFor="title" className="text-center text-uppercase">
           <h1>INSERT LOGIN INFO</h1>

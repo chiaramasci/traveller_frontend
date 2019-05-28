@@ -7,7 +7,7 @@ import OrgRouter from "./js/components/Routers/OrgRouter";
 import { connect } from "react-redux";
 
 const mapStateToProps = state => {
-  return { user_id: state.user_id };
+  return { user_id: state.CUser.user_id };
 };
 
 class ConnectedApp extends React.Component {
@@ -24,11 +24,18 @@ class ConnectedApp extends React.Component {
     this.setState({ location: e.target.id });
   }
 
+  componentWillReceiveProps(newProps) {
+    if (newProps.user_id !== "") {
+      this.setState({ location: "LoggedRouter" });
+    } else {
+      this.setState({ location: "UnloggedRouter" });
+    }
+  }
+
   render() {
     return (
       <div>
-        {/* TODO: user_id seems not to be updated after login */}
-        {/* <p>dai dai dai {this.props.user_id}</p> */}
+        <p>dai dai dai {this.props.user_id}</p>
         <LoggedRouter
           id="LoggedRouter"
           handleLocation={this.handleLocation}
