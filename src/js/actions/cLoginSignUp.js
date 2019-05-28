@@ -32,6 +32,7 @@ export function login(loginInfo) {
     return fetch(API_URL + "/login", {
       method: "POST",
       "Content-Type": "application/json",
+      credentials: "same-origin",
       Accept: "text/plain",
       body: JSON.stringify(data)
     })
@@ -77,6 +78,7 @@ export function createDBUser(userInfo) {
       method: "POST",
       "Content-Type": "application/json",
       Accept: "text/plain",
+      credentials: "same-origin",
       crossDomain: true,
       body: JSON.stringify(data)
     })
@@ -96,13 +98,14 @@ export function logout() {
   return function(dispatch, getState) {
     return fetch(API_URL + "/logout", {
       Accept: "text/plain",
-      credentials: "include"
+      credentials: "include",
+      credentials: "same-origin"
     })
       .then(response => response.text())
       .then(text => {
         console.log(text);
         if (text != "WRONG") {
-          dispatch({ type: LOGGED_OUT, payload: text });
+          dispatch({ type: LOGGED_OUT });
         } else {
           dispatch({ type: "ERROR", payload: text });
         }

@@ -13,8 +13,8 @@ const CUser_state = {
     url_picture: "lala.png",
     nationality: "Italian",
     bio: "awesome bio",
-    languages: ["Italian", "English", "German"],
-    interests: ["electronics", "climbing"]
+    languages: "Italian,English,German",
+    interests: "electronics,climbing"
   }
 };
 
@@ -31,7 +31,18 @@ export default function CUser(state = CUser_state, action) {
     case UPDATE_PROFILE:
       return state;
     case GET_USER_INFO:
-      return state;
+      return Object.assign({}, state, {
+        user_id: action.payload.user_id,
+        userInfo: {
+          name: action.payload.name,
+          surname: action.payload.surname,
+          url_picture: action.payload.url_picture,
+          nationality: action.payload.nationality,
+          bio: "awesome bio",
+          languages: action.payload.languages_list,
+          interests: action.payload.interests_list
+        }
+      });
     default:
       return state;
   }

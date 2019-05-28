@@ -54,7 +54,7 @@ class AppRouter extends React.Component {
             </div>
           </nav>
           <Route path="/" exact component={Home} />
-          <Route path="/organization/" component={OrgHome} />
+          <Route path="/organization/" component={toOrganization} />
           <Route path="/signup/" component={SignUpMaster} />
           <Route path="/social/login/" component={Login} />
         </Router>

@@ -9,14 +9,16 @@ import {
 } from "../constants/cMessagePeople";
 
 const CMessagePeople_state = {
-  listConversations: [{ conv_id: 1, name: "Michela" }],
+  listConversations: [],
   listMessages: []
 };
 
 export default function CSearchPeople(state = CMessagePeople_state, action) {
   switch (action.type) {
     case GET_LIST_CHATS:
-      return state;
+      return Object.assign({}, state, {
+        listConversations: [].concat(action.payload)
+      });
     case GET_CHAT_MESSAGES:
       return state;
     case ADD_MESSAGE:

@@ -58,7 +58,7 @@ class TextInputTags extends Component {
 
         <div>
           {this.state.inputsInserted.map((item, index) => (
-            <div key={index}>
+            <div class="tag" key={index}>
               {item}
               <i id={item} className="fa fa-times" onClick={this.removeInput} />
             </div>

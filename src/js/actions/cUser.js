@@ -1,4 +1,5 @@
-//TODO: TEST
+import { GET_USER_INFO } from "../constants/cUser";
+
 //"https://traveller-friendeller19872.appspot.com
 const API_URL = "http://127.0.0.1:5000";
 
@@ -56,19 +57,22 @@ export function getUserInfo(userId) {
 
     console.log(JSON.stringify(data));
 
-    return fetch(API_URL + "/getuserinfo/" + user_id, {
+    return fetch(API_URL + "/getuserinfo/", {
+      method: "POST",
       "Content-Type": "application/json",
-      Accept: "text/plain"
+      Accept: "text/plain",
+      body: JSON.stringify(data)
     })
-      .then(response => response.text())
-      .then(text => {
-        console.log(text);
-        if (text == "NOT_LOGGED") {
-          dispatch({ type: "NOT_LOGGED", payload: text });
-        } else if (text == "ID_NOT_VALID") {
-          dispatch({ type: "ID_NOT_VALID", payload: text });
+      .then(response => response.json())
+      .then(json => {
+        console.log(json);
+        if (json == "NOT_LOGGED") {
+          dispatch({ type: "NOT_LOGGED", payload: json });
+        } else if (json == "ID_NOT_VALID") {
+          dispatch({ type: "ID_NOT_VALID", payload: json });
         } else {
-          dispatch({ type: "PROFILE_LOADED", payload: text });
+          console.log(json);
+          dispatch({ type: GET_USER_INFO, payload: json });
         }
       });
   };

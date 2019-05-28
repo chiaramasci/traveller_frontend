@@ -7,7 +7,7 @@ import OrgRouter from "./js/components/Routers/OrgRouter";
 import { connect } from "react-redux";
 
 const mapStateToProps = state => {
-  return { user_id: state.CUser.user_id };
+  return { user_id: state.CLoginSignUp.user_id };
 };
 
 class ConnectedApp extends React.Component {

@@ -223,7 +223,6 @@
   background-color: blue;
   color: white;
   padding: 10px 10px;
-  margin: 40px;
   border: none;
   border-radius: 20px;
   text-align: center;
@@ -234,9 +233,27 @@
   width: 100px;
   opacity: 0.9;
   float: right;
+  position: absolute;
+  bottom: 20px;
 }
 #listchats button:hover {
   opacity: 1;
+}
+
+/*PROFILE*/
+#profile button {
+  background-color: blue;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: center;
+  font-size: 13px;
+  width: 100px;
+  opacity: 0.9;
 }
 
 /*ORG FLIGHTS*/
@@ -397,8 +414,8 @@ nav {
   font-family: "Verdana", sans-serif;
   font-weight: bold;
   font-size: 42px;
-  top: 10vh;
-  left: 20vw;
+  top: 20vh;
+  left: 15vw;
   color: white;
   position: absolute;
 }
@@ -478,6 +495,14 @@ nav {
   margin-bottom: 20px;
 }
 
+/*PROFILE*/
+#profile h1 {
+  font-size: 2rem;
+}
+#profile h2 {
+  font-size: 1.5rem;
+}
+
 /*HOME*/
 #home #cf img {
   position: absolute;
@@ -529,6 +554,7 @@ nav {
 @media screen and (max-width: 300px) {
   .container {
     padding: 40px;
+    width: 100vw;
   }
 }
 
@@ -662,19 +688,56 @@ nav {
 }
 #listchats .chat {
   margin: 0px;
-  margin-left: 40px;
   text-align: left;
   float: left;
   border: 1px solid;
   border-radius: 3px;
-  width: 500px;
-  height: 50px;
-  padding: 10px;
+  width: 100%;
+  padding: 22px;
+  font-size: 1.5em;
+  background: #eee;
+  transition: 0.5s;
+}
+#listchats .chat .chat:hover {
+  background: #ddd;
+  cursor: pointer;
+}
+@media screen and (max-width: 300px) {
+  #listchats .chat {
+    margin: 0px;
+    margin-left: 0px;
+    text-align: left;
+    float: left;
+    border: 1px solid;
+    border-radius: 3px;
+    width: 150px;
+    height: 60px;
+    padding: 0px;
+  }
 }
 @media screen and (max-width: 300px) {
   #listchats .container {
     padding: 40px;
   }
+}
+
+.tagfascia {
+  overflow: auto;
+  padding: 20px;
+  border-bottom: solid 2px #0001ff;
+  background-color: #eee;
+}
+.tagfascia h3 {
+  color: blue;
+  margin-bottom: 30px;
+}
+
+.tag {
+  color: blue;
+  padding: 5px 10px;
+  float: left;
+  border: solid 2px;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

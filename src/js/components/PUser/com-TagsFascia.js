@@ -7,13 +7,15 @@ export class TagsFascia extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="tagfascia">
         {/* title */}
         <h3>{this.props.title}</h3>
         {/* tags */}
-        {this.props.tags.map(el => (
-          <Tag key={el.id} title={el} />
-        ))}
+        <div>
+          {this.props.tags.map(el => (
+            <Tag key={el.id} title={el} />
+          ))}
+        </div>
       </div>
     );
   }

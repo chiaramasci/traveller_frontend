@@ -1,3 +1,9 @@
+import {
+  GET_LIST_CHATS,
+  GET_CHAT_MESSAGES,
+  ADD_MESSAGE
+} from "../constants/cMessagePeople";
+
 //"https://traveller-friendeller19872.appspot.com
 const API_URL = "http://127.0.0.1:5000";
 
@@ -14,14 +20,14 @@ export function getListChats(user_id) {
       Accept: "application/json",
       body: JSON.stringify(data)
     })
-      .then(response => response.text())
-      .then(text => {
-        console.log(text);
-        // if (text == "NOT_LOGGED") {
-        //   dispatch({ type: "NOT_LOGGED", payload: text });
-        // } else {
-        //   dispatch({ type: "CHATS_LOADED", payload: text });
-        // }
+      .then(response => response.json())
+      .then(json => {
+        console.log(json);
+        if (json == "NOT_LOGGED") {
+          dispatch({ type: "NOT_LOGGED", payload: json });
+        } else {
+          dispatch({ type: GET_LIST_CHATS, payload: json });
+        }
       });
   };
 }

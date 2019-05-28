@@ -7,7 +7,7 @@ export class ImageHeader extends Component {
   render() {
     return (
       <div>
-        <img />
+        <img src={this.props.img} />
       </div>
     );
   }

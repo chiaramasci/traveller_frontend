@@ -35,17 +35,17 @@ class AppRouter extends React.Component {
               <div id="navbarCollapse" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav mr-auto">
                   <li class="nav-item">
-                    <Link class="nav-link" to="/organization/flights/">
+                    <Link class="nav-link" to="/flights/">
                       FLIGHTS
                     </Link>
                   </li>
                   <li class="nav-item">
-                    <Link class="nav-link" to="/organization/sleep/">
+                    <Link class="nav-link" to="/sleep/">
                       SLEEP
                     </Link>
                   </li>
                   <li class="nav-item">
-                    <Link class="nav-link" to="/organization/props/">
+                    <Link class="nav-link" to="/props/">
                       PROPS
                     </Link>
                   </li>
@@ -55,9 +55,9 @@ class AppRouter extends React.Component {
 
             <Route path="/" exact component={Home} />
             <Route path="/organization/" component={OrgHome} />
-            <Route path="/organization/flights/" component={OrgFlights} />
-            <Route path="/organization/sleep/" component={OrgSleep} />
-            <Route path="/organization/props/" component={OrgProps} />
+            <Route path="/flights/" component={OrgFlights} />
+            <Route path="/sleep/" component={OrgSleep} />
+            <Route path="/props/" component={OrgProps} />
             <Route path="/organization/login/" component={Login} />
           </div>
         </Router>

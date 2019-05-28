@@ -5,11 +5,7 @@ export class Tag extends Component {
     super();
   }
   render() {
-    return (
-      <li>
-        <h4>{this.props.title}</h4>
-      </li>
-    );
+    return <div class="tag">{this.props.title}</div>;
   }
 }
 
